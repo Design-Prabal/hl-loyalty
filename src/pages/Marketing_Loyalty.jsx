@@ -144,9 +144,8 @@ function StepCard({ icon: Icon, number, title, description }) {
 
 export default function LoyaltyPitchPage() {
   return (
-    <div className={`flex-1 overflow-auto bg-[#F9FAFB] p-4 flex flex-col`}>
+    <div className="flex-1 overflow-auto bg-[#F9FAFB] p-4">
       <div className={`bg-white rounded-xl ${SHADOW} overflow-hidden`}>
-        <div className="overflow-y-auto">
 
           {/* Hero */}
           <div
@@ -231,7 +230,6 @@ export default function LoyaltyPitchPage() {
             <p className="text-[12px] font-medium text-white/45 relative z-10">No setup fees</p>
           </div>
 
-        </div>
       </div>
     </div>
   )
