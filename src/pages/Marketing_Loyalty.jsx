@@ -147,7 +147,7 @@ export default function LoyaltyPitchPage() {
               {/* Left */}
               <div className="flex flex-col gap-5 flex-1 min-w-0">
                 <div className="bg-[#EEF4FF] text-[#004EEB] text-[12px] font-medium px-3 py-1 rounded-full w-fit">
-                  New · Loyalty
+                  Earn. Reward. Retain.
                 </div>
                 <h1 className="text-[28px] font-extrabold text-[#101828] leading-[1.25]">
                   Customers are 1.5× more likely to return when rewarded
