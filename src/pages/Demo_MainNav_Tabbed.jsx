@@ -42,16 +42,7 @@ export default function Demo_MainNav_Tabbed() {
 
   const isLoyalty = activeSection === 'Loyalty'
 
-  const actions = isLoyalty ? (
-    <div className="flex items-center gap-1.5">
-      <button className="h-8 px-3 flex items-center text-[13px] font-medium text-[#344054] border border-[#D0D5DD] rounded-lg hover:bg-[#F9FAFB] transition-colors">
-        Talk to sales
-      </button>
-      <button className="h-8 px-3 flex items-center text-[13px] font-semibold text-white bg-[#004EEB] rounded-lg hover:bg-[#0040C9] transition-colors">
-        Get started
-      </button>
-    </div>
-  ) : (
+  const actions = isLoyalty ? null : (
     <div className="flex items-center gap-1.5">
       <button className="size-8 flex items-center justify-center rounded-md border border-[#EAECF0] text-[#667085] hover:bg-[#F9FAFB] transition-colors">
         <RefreshCw size={13} />
