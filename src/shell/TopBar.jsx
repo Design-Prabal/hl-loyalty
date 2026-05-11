@@ -209,11 +209,13 @@ export default function TopBar({
     )
   }
 
+  const hasSubRow = subTabs.length > 0 || !!actions
+
   return (
     <header className="bg-white w-full flex flex-col shrink-0">
 
       {/* Row 1: title + section tabs + global icons */}
-      <div className="flex items-center gap-4 px-4 pt-2 pb-1">
+      <div className={`flex items-center gap-4 px-4 pt-2 ${hasSubRow ? 'pb-1' : 'pb-2 border-b border-[#D0D5DD] shadow-[0px_1px_1px_rgba(16,24,40,0.05)]'}`}>
         <div className="flex flex-1 self-stretch items-center gap-3 min-w-0">
           <div className="flex items-center gap-1.5 whitespace-nowrap shrink-0">
             {TitleIcon && <TitleIcon size={15} className="text-[#667085]" />}
@@ -229,23 +231,25 @@ export default function TopBar({
         <GlobalIcons />
       </div>
 
-      {/* Row 2: subLabel + sub-tabs + optional actions */}
-      <div className="flex items-center gap-4 px-4 min-h-[44px] border-b border-[#D0D5DD] shadow-[0px_1px_1px_rgba(16,24,40,0.05)]">
-        <div className="flex flex-1 self-stretch items-center gap-2 min-w-0">
-          <OverflowTabRow
-            tabs={subTabs}
-            activeTab={activeSubTab}
-            onTabChange={onSubTabChange}
-            textSize="text-[14px]"
-            indicatorBottom="bottom-0"
-          />
-        </div>
-        {actions && (
-          <div className="flex items-center gap-2 shrink-0">
-            {actions}
+      {/* Row 2: only rendered when there are sub-tabs or actions */}
+      {hasSubRow && (
+        <div className="flex items-center gap-4 px-4 min-h-[44px] border-b border-[#D0D5DD] shadow-[0px_1px_1px_rgba(16,24,40,0.05)]">
+          <div className="flex flex-1 self-stretch items-center gap-2 min-w-0">
+            <OverflowTabRow
+              tabs={subTabs}
+              activeTab={activeSubTab}
+              onTabChange={onSubTabChange}
+              textSize="text-[14px]"
+              indicatorBottom="bottom-0"
+            />
           </div>
-        )}
-      </div>
+          {actions && (
+            <div className="flex items-center gap-2 shrink-0">
+              {actions}
+            </div>
+          )}
+        </div>
+      )}
     </header>
   )
 }
