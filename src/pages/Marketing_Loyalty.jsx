@@ -1,4 +1,4 @@
-import { ArrowRight, RefreshCw, Users, TrendingUp, Settings, UserPlus, LayoutDashboard } from 'lucide-react'
+import { ArrowRight, RefreshCw, Users, TrendingUp, Settings, UserPlus, LayoutDashboard, ShoppingCart } from 'lucide-react'
 
 const SHADOW = 'shadow-[0px_12px_16px_-4px_rgba(16,24,40,0.08),0px_4px_6px_-2px_rgba(16,24,40,0.03)]'
 
@@ -65,23 +65,10 @@ function LoyaltyCard() {
 
         <div style={{ position: 'relative', zIndex: 1 }}>
           {/* Header */}
-          <div className="flex items-center justify-between mb-6">
-            <div className="flex items-center gap-2 bg-white/10 px-2.5 py-1.5 rounded-lg">
-              <div className="flex gap-[3px]">
-                <div style={{ width: 7, height: 7, borderRadius: 2, background: 'rgba(255,255,255,0.9)' }} />
-                <div style={{ width: 7, height: 7, borderRadius: 2, background: 'rgba(255,255,255,0.5)' }} />
-              </div>
-              <div className="flex gap-[3px]">
-                <div style={{ width: 7, height: 7, borderRadius: 2, background: 'rgba(255,255,255,0.5)' }} />
-                <div style={{ width: 7, height: 7, borderRadius: 2, background: 'rgba(255,255,255,0.9)' }} />
-              </div>
-              <span className="text-white text-[11px] font-semibold tracking-wide">Your brand</span>
-            </div>
-            <div className="flex items-center gap-1 bg-white/15 px-2 py-1 rounded-full">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="#FFD166">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-              </svg>
-              <span className="text-[11px] font-semibold text-[#FFD166]">Gold member</span>
+          <div className="flex items-center mb-6">
+            <div className="flex items-center gap-1.5 bg-white/10 px-2.5 py-1.5 rounded-lg">
+              <ShoppingCart size={12} className="text-white" strokeWidth={2} />
+              <span className="text-white text-[11px] font-semibold tracking-wide">Shopping reward</span>
             </div>
           </div>
 
