@@ -66,12 +66,16 @@ function LoyaltyCard() {
         <div style={{ position: 'relative', zIndex: 1 }}>
           {/* Header */}
           <div className="flex items-center justify-between mb-6">
-            <div>
-              <svg width="28" height="22" viewBox="0 0 48 40" fill="none">
-                <path d="M8 36V20L18 8L28 20V36" stroke="#F9C400" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M22 36V20L32 8L42 20V36" stroke="#00C4C4" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-              <p className="text-white/60 text-[11px] font-medium mt-1">HighLevel Loyalty</p>
+            <div className="flex items-center gap-2 bg-white/10 px-2.5 py-1.5 rounded-lg">
+              <div className="flex gap-[3px]">
+                <div style={{ width: 7, height: 7, borderRadius: 2, background: 'rgba(255,255,255,0.9)' }} />
+                <div style={{ width: 7, height: 7, borderRadius: 2, background: 'rgba(255,255,255,0.5)' }} />
+              </div>
+              <div className="flex gap-[3px]">
+                <div style={{ width: 7, height: 7, borderRadius: 2, background: 'rgba(255,255,255,0.5)' }} />
+                <div style={{ width: 7, height: 7, borderRadius: 2, background: 'rgba(255,255,255,0.9)' }} />
+              </div>
+              <span className="text-white text-[11px] font-semibold tracking-wide">Your brand</span>
             </div>
             <div className="flex items-center gap-1 bg-white/15 px-2 py-1 rounded-full">
               <svg width="11" height="11" viewBox="0 0 24 24" fill="#FFD166">
