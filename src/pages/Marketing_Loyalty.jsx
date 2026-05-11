@@ -115,10 +115,10 @@ function LoyaltyCard() {
 
 function StepCard({ icon: Icon, number, title, description }) {
   return (
-    <div className="flex-1 bg-[#F9FAFB] border border-[#EAECF0] rounded-[8px] p-5 flex flex-col gap-4 relative overflow-hidden">
+    <div className="flex-1 bg-[#F9FAFB] rounded-[8px] p-5 flex flex-col gap-4 relative overflow-hidden">
       <span
-        className="absolute font-extrabold text-[#EAECF0] select-none"
-        style={{ fontSize: 72, lineHeight: 1, top: -8, right: 12 }}
+        className="absolute font-extrabold select-none"
+        style={{ fontSize: 80, lineHeight: 1, top: -6, right: -6, color: '#E4E7EC' }}
       >
         {number}
       </span>
