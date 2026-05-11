@@ -84,7 +84,7 @@ function LoyaltyCard() {
           {/* Progress to Platinum */}
           <div>
             <div className="flex items-center justify-between mb-1.5">
-              <p className="text-white/60 text-[11px] font-medium">Progress to Platinum</p>
+              <p className="text-white/60 text-[11px] font-medium">Discount coming</p>
               <p className="text-white/80 text-[11px] font-medium">82%</p>
             </div>
             <div className="h-1.5 bg-white/20 rounded-full overflow-hidden">
@@ -96,7 +96,7 @@ function LoyaltyCard() {
 
       {/* Floating notification */}
       <div
-        className="absolute -bottom-4 -left-6 bg-white border border-[#EAECF0] rounded-[10px] px-3 py-2.5 flex items-center gap-2.5"
+        className="absolute -bottom-1 -left-6 bg-white border border-[#EAECF0] rounded-[10px] px-3 py-2.5 flex items-center gap-2.5"
         style={{ boxShadow: '0 4px 16px rgba(16,24,40,0.10)', minWidth: 188 }}
       >
         <div className="w-7 h-7 bg-[#DCFCE7] rounded-full flex items-center justify-center shrink-0">
