@@ -96,7 +96,7 @@ function LoyaltyCard() {
 
       {/* Floating notification */}
       <div
-        className="absolute -bottom-8 -left-6 bg-white border border-[#EAECF0] rounded-[10px] px-3 py-2.5 flex items-center gap-2.5"
+        className="absolute -bottom-5 -left-6 bg-white border border-[#EAECF0] rounded-[10px] px-3 py-2.5 flex items-center gap-2.5"
         style={{ boxShadow: '0 4px 16px rgba(16,24,40,0.10)', minWidth: 188 }}
       >
         <div className="w-7 h-7 bg-[#DCFCE7] rounded-full flex items-center justify-center shrink-0">
