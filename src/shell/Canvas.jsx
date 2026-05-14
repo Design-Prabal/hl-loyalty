@@ -58,7 +58,7 @@ export default function Canvas({
           </div>
 
           {/* Scrollable body */}
-          <div className="flex-1 overflow-y-auto px-8 py-6">
+          <div className="flex-1 overflow-y-auto no-scrollbar px-8 py-6">
             {children}
           </div>
         </div>
@@ -67,7 +67,7 @@ export default function Canvas({
   }
 
   return (
-    <div className="flex-1 overflow-auto bg-[#F9FAFB] p-4 flex flex-col">
+    <div className="flex-1 overflow-auto no-scrollbar bg-[#F9FAFB] p-4 flex flex-col">
       <div className={`bg-white rounded-xl ${CANVAS_SHADOW} px-8 py-6 flex-1`}>
         {children}
       </div>

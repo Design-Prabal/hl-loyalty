@@ -7,6 +7,8 @@ import {
 import AppShell from '../shell/AppShell'
 import Canvas from '../shell/Canvas'
 import LoyaltyPitchPage from './Marketing_Loyalty'
+import LoyaltyCampaignWizard from './Marketing_Loyalty_Campaign'
+import NewCampaignModal from './Marketing_Loyalty_NewCampaignModal'
 
 const NAV_SECTIONS = [
   {
@@ -39,6 +41,7 @@ const SUB_TABS = ['Planner', 'Content', 'Comments', 'Statistics', 'Social listen
 export default function Demo_MainNav_Tabbed() {
   const [activeSection, setActiveSection] = useState('Loyalty')
   const [activeSubTab, setActiveSubTab] = useState('Social listening')
+  const [loyaltyView, setLoyaltyView] = useState('pitch')
 
   const isLoyalty = activeSection === 'Loyalty'
 
@@ -61,6 +64,14 @@ export default function Demo_MainNav_Tabbed() {
     </div>
   )
 
+  if (isLoyalty && loyaltyView === 'wizard') {
+    return (
+      <div className="h-screen flex flex-col">
+        <LoyaltyCampaignWizard onCancel={() => setLoyaltyView('pitch')} />
+      </div>
+    )
+  }
+
   return (
     <AppShell
       sidebar="main-nav"
@@ -77,8 +88,16 @@ export default function Demo_MainNav_Tabbed() {
         actions,
       }}
     >
-      {isLoyalty ? (
-        <LoyaltyPitchPage />
+      {isLoyalty && (loyaltyView === 'pitch' || loyaltyView === 'modal') ? (
+        <>
+          <LoyaltyPitchPage onGetStarted={() => setLoyaltyView('modal')} />
+          {loyaltyView === 'modal' && (
+            <NewCampaignModal
+              onCancel={() => setLoyaltyView('pitch')}
+              onConfirm={() => setLoyaltyView('wizard')}
+            />
+          )}
+        </>
       ) : (
         <Canvas level={1}>
           <div className="mb-5">

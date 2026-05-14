@@ -55,11 +55,11 @@ function NavItemMainNav({ icon: Icon, label, active, collapsed }) {
     )
   }
   return (
-    <div className={`flex gap-2 items-center px-2 py-2 rounded-lg w-full cursor-pointer ${
+    <div className={`flex gap-2 items-center px-2 py-1.5 rounded-lg w-full cursor-pointer ${
       active ? 'bg-[#1D2939]' : 'hover:bg-[#1D2939]/50'
     }`}>
-      <Icon size={20} strokeWidth={1.8} className={active ? 'text-white' : 'text-[#98A2B3]'} />
-      <span className={`text-[16px] font-medium leading-5 ${active ? 'text-white' : 'text-[#D0D5DD]'}`}>
+      <Icon size={17} strokeWidth={1.8} className={active ? 'text-white' : 'text-[#98A2B3]'} />
+      <span className={`text-[13px] font-medium leading-5 ${active ? 'text-white' : 'text-[#D0D5DD]'}`}>
         {label}
       </span>
     </div>
@@ -80,11 +80,11 @@ function NavItemSettings({ icon: Icon, label, active, collapsed }) {
     )
   }
   return (
-    <div className={`flex gap-2 items-center px-2 py-2 rounded-lg w-full cursor-pointer ${
+    <div className={`flex gap-2 items-center px-2 py-1.5 rounded-lg w-full cursor-pointer ${
       active ? 'bg-[#1D2939]' : 'hover:bg-[#1D2939]/50'
     }`}>
-      <Icon size={20} strokeWidth={1.8} className={active ? 'text-white' : 'text-[#98A2B3]'} />
-      <span className={`text-[16px] font-medium leading-5 ${active ? 'text-white' : 'text-[#D0D5DD]'}`}>
+      <Icon size={17} strokeWidth={1.8} className={active ? 'text-white' : 'text-[#98A2B3]'} />
+      <span className={`text-[13px] font-medium leading-5 ${active ? 'text-white' : 'text-[#D0D5DD]'}`}>
         {label}
       </span>
     </div>
@@ -116,7 +116,7 @@ export default function Sidebar({
   const NavItem = isSettings ? NavItemSettings : NavItemMainNav
 
   return (
-    <aside className={`relative flex flex-col h-screen bg-[#101828] px-2 py-4 shrink-0 transition-[width] duration-200 ${collapsed ? 'w-[64px]' : 'w-[280px]'}`}>
+    <aside className={`relative flex flex-col h-screen bg-[#101828] px-2 py-4 shrink-0 transition-[width] duration-200 ${collapsed ? 'w-[64px]' : 'w-[220px]'}`}>
       <div className="flex flex-col flex-1 justify-between min-h-0">
         <div className="flex flex-col gap-3 flex-1 min-h-0">
 
@@ -189,7 +189,7 @@ export default function Sidebar({
           )}
 
           {/* Nav items */}
-          <div className="flex flex-col gap-1 flex-1 overflow-y-auto">
+          <div className="flex flex-col gap-1 flex-1 overflow-y-auto no-scrollbar">
             {isSettings ? (
               sections.map((section, i) => (
                 <div key={i} className="flex flex-col gap-1">

@@ -47,7 +47,7 @@ export default function Demo_Fullscreen_Builder() {
           <div className="border-b border-[#EAECF0] px-4 py-3 shrink-0">
             <p className="text-[14px] font-semibold text-[#101828]">Properties</p>
           </div>
-          <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-4">
+          <div className="flex-1 overflow-y-auto no-scrollbar p-4 flex flex-col gap-4">
             {['Content', 'Style', 'Settings'].map(section => (
               <div key={section}>
                 <p className="text-[12px] font-semibold uppercase tracking-wider text-[#98A2B3] mb-2">

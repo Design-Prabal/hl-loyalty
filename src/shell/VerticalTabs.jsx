@@ -1,6 +1,6 @@
 export default function VerticalTabs({ tabs, activeTab, onTabChange, className = '' }) {
   return (
-    <aside className={`flex flex-col w-[200px] shrink-0 overflow-y-auto ${className}`}>
+    <aside className={`flex flex-col w-[200px] shrink-0 overflow-y-auto no-scrollbar ${className}`}>
       <div className="flex flex-col gap-2 p-4">
         {tabs.map(tab => (
           <button
